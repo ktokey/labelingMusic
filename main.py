@@ -174,9 +174,10 @@ if isLoadModel:
     # load trained parameters
     myModel.load_weights(checkpoint_path)
 
+myModel.compile(loss="sparse_categorical_crossentropy", optimizer="adam", metrics=["acc"])
+
 if isTrainModel:
     # training
-    myModel.compile(loss="sparse_categorical_crossentropy", optimizer="adam", metrics=["acc"])
     hist = myModel.fit(x_train, y_train, epochs=500, batch_size=128, verbose=1, validation_data=(x_test, y_test), callbacks=[cp_callback])
 
 if isVisualize:
