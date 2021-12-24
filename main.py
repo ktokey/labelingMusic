@@ -14,10 +14,10 @@ import warnings
 warnings.filterwarnings('ignore')
 import pdb
 
-isVisualize = False
-isMakeData = False
-isLoadModel = True
-isTrainModel = False
+isVisualize = True
+isMakeData = True
+isLoadModel = False
+isTrainModel = True
 
 dataPath = "data"
 visualPath = "visualization"
